@@ -26,6 +26,7 @@ namespace NetCore3._1_NLogMail_Demo.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogError("Nlog Test");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
